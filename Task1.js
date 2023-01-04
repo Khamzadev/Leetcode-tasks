@@ -1,53 +1,41 @@
-//1903. Largest Odd Number in String
-
-//Условия
-/**
- * 
- * Вам дана строка num, представляющая большое целое число.
- *  Возвращает нечетное целое число с наибольшим значением (в виде строки), 
- * которое является непустой подстрокой числа, или пустой строкой "", 
- * если нечетное целое число не существует.
-   Подстрока — это непрерывная последовательность символов в строке
- */
+//9. Palindrome Number
 
 /**
- * 
- * Example 1:
+ * Условия 
+ * Учитывая целое число x, вернуть, trueесли xэто
+палиндром
+, и в falseпротивном случае .
 
-Input: num = "52"
-Output: "5"
-Explanation: The only non-empty substrings are "5", "2", and "52". "5" is the only odd number.
+
+Example 1:
+
+Input: x = 121
+Output: true
+Explanation: 121 reads as 121 from left to right and from right to left.
 Example 2:
 
-Input: num = "4206"
-Output: ""
-Explanation: There are no odd numbers in "4206".
+Input: x = -121
+Output: false
+Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
 Example 3:
 
-Input: num = "35427"
-Output: "35427"
-Explanation: "35427" is already an odd number.
+Input: x = 10
+Output: false
+Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
  */
 
 
-let tasks1 = (num) => {
-  for (let i = num.length - 1; i >= 0; i--) {
-    if (num[i] % 2 !== 0) {
-      return num.slice(0, i - 1)
-    }
-  }
-  return ''
-}
-console.log(tasks1('555'))
+var isPalindrome = function(x) {
+  let reversed = x.toString().split('').reverse().join('')
+  return (x.toString() === reversed)
+};
 
 
-
-
-//Как я решил ?
 /**
- * 1.Чтоб проверить каждое число из сроки на четность я создал цикл 
- * 2.В цикле следующие условия это он пробегается по ка ждому числу и пробегаетс по чисдам которые равны или больше нуля
- * 3.Внутри цикла я создал условие
- * Условие : проверяю каждое число на нечетность , и если число нечетное то отнимаю 1 с длиины
- * 5. Если на два делиться без остатка то возрвщает пустую строку  
+ * 
+ * Как я решил ?
+ * 
+ * Для начала создал переменную
+ * Внутри которой я конвертирую в строку X и делю каждый элмент строки в отдельный  и делать рерверс и соеденяю
+ * И если это переменная равна в строке x то верти ее 
  */
