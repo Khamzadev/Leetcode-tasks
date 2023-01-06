@@ -2,14 +2,14 @@
 
 /**
  * Условия 
- * Учитывая целое число x, вернуть, trueесли xэто
+ * Учитывая целое число x, вернуть, true если x это
 палиндром
-, и в falseпротивном случае .
+, и в false противном случае .
 
 
 Example 1:
 
-Input: x = 121
+Input: x = 121 
 Output: true
 Explanation: 121 reads as 121 from left to right and from right to left.
 Example 2:
