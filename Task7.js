@@ -32,7 +32,7 @@ let removeDublicates = (nums) => {
   for (let i = 0; i < nums.length; i++) {
     if (nums[i - 1] != nums[i]) {
       nums[insertIndex] = nums[i];
-      insertIndex++;
+      insertIndex++; 
     }
   }
 };
